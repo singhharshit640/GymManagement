@@ -71,27 +71,26 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:clickable="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:clickable="true"
-                        android:id="@+id/btnAddDetails"
-                        android:src="@drawable/add_details" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:clickable="true"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:text="Add Details"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/ivAddDetails"
+                            android:clickable="true"
+                            android:src="@drawable/add_details" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Add Details"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
 
                 </LinearLayout>
                 
@@ -114,21 +113,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:clickable="true"
-                        android:src="@drawable/diet" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:clickable="true"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:text="Diet"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:clickable="true"
+                            android:id="@+id/ivDiet"
+                            android:src="@drawable/diet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Diet"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
 
                 </LinearLayout>
 
@@ -151,40 +153,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:clickable="true"
-                        android:src="@drawable/payment" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="12dp"
+                        <ImageView
+                            android:layout_width="80dp"
                             android:clickable="true"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:text="Current"
-                            android:textColor="#000"
-                            android:textSize="18sp" />
+                            android:id="@+id/ivPlan"
+                            android:layout_height="80dp"
+                            android:src="@drawable/payment" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:clickable="true"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:text="Plan"
-                            android:textColor="#000"
-                            android:textSize="18sp" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:clickable="true"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Current"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Plan"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -208,21 +212,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:clickable="true"
-                        android:src="@drawable/profile" />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:clickable="true"
+                            android:id="@+id/ivProfile"
+                            android:src="@drawable/profile" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:clickable="true"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:text="Profile"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Profile"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
 
                 </LinearLayout>
 
@@ -245,21 +251,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:clickable="true"
-                        android:src="@drawable/logout" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:clickable="true"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:text="Logout"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:clickable="true"
+                            android:id="@+id/ivLogout"
+                            android:src="@drawable/logout" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Logout"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
 
                 </LinearLayout>
 

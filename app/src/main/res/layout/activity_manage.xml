@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wave"
+    tools:context=".ManageActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/listofusers"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ManageUsers"
+            android:textSize="28dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/white"
+            android:text="Manage Users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/ManageUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_marginLeft="18dp"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back">
+
+            <TextView
+                android:padding="3dp"
+                android:id="@+id/tvRemoveUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="Remove User"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back">
+
+            <TextView
+                android:id="@+id/tvUserDiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="User Diet"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:textSize="22dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
