@@ -2,7 +2,9 @@ package com.sleepingpandaaa.gymmanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ManageActivity extends AppCompatActivity {
@@ -19,6 +21,13 @@ public class ManageActivity extends AppCompatActivity {
         tvRemoveUser = findViewById(R.id.tvRemoveUser);
         tvUserDiet = findViewById(R.id.tvUserDiet);
 
+        tvUserDiet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ManageActivity.this, UserDietActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

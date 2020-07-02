@@ -41,6 +41,22 @@ public class DashboardUser extends AppCompatActivity {
             }
         });
 
+        ivPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardUser.this, CurrentPlanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ivDiet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardUser.this, DietActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".PaymentActivity"></activity>
+        <activity android:name=".UserDietActivity"></activity>
+        <activity android:name=".DietActivity" />
+        <activity android:name=".CurrentPlanActivity" />
+        <activity android:name=".PaymentActivity" />
         <activity android:name=".NetStatsActivity" />
         <activity android:name=".ManageActivity" />
         <activity android:name=".UserProfileActivity" />
