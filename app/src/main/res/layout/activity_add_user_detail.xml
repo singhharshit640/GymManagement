@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wave"
+    tools:context=".AddUserDetail">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDashboard"
+                android:textSize="30dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/white"
+                android:text="Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/gym"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+            <TextView
+                android:layout_below="@id/tvDashboard"
+                android:text="User"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="First Name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity=""
+                    android:textSize="18sp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="Last Name"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18sp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:text="Gender: "
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <Spinner
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/gender"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="105dp"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity=""
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:hint="Age "
+                    android:inputType="number"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:text="Blood Group: "
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <Spinner
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/bloodgroup"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="150dp"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity=""
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:hint="Height in cm."
+                    android:inputType="number"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity=""
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:hint="Weight in kg"
+                    android:inputType="number"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/button_back">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:contextClickable="true"
+                    android:clickable="true"
+                    android:id="@+id/tvSignup1"
+                    android:textColor="#fff"
+                    android:textSize="22dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
