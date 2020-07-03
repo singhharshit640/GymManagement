@@ -13,7 +13,6 @@
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".UserDietActivity"></activity>
         <activity android:name=".DietActivity" />
-        <activity android:name=".CurrentPlanActivity" />
         <activity android:name=".PaymentActivity" />
         <activity android:name=".NetStatsActivity" />
         <activity android:name=".ManageActivity" />

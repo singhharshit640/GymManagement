@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class DashboardUser extends AppCompatActivity {
 
-    ImageView ivAddDetails, ivDiet, ivPlan, ivProfile, ivLogout;
+    ImageView ivAddDetails, ivDiet, ivProfile, ivLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,6 @@ public class DashboardUser extends AppCompatActivity {
 
         ivAddDetails = findViewById(R.id.ivAddDetails);
         ivDiet = findViewById(R.id.ivDiet);
-        ivPlan = findViewById(R.id.ivPlan);
         ivProfile = findViewById(R.id.ivProfile);
         ivLogout = findViewById(R.id.ivLogout);
 
@@ -41,13 +40,6 @@ public class DashboardUser extends AppCompatActivity {
             }
         });
 
-        ivPlan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DashboardUser.this, CurrentPlanActivity.class);
-                startActivity(intent);
-            }
-        });
 
         ivDiet.setOnClickListener(new View.OnClickListener() {
             @Override
