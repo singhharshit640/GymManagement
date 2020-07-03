@@ -43,12 +43,14 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_height="wrap_content">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:drawableEnd="@drawable/username_right"
-                    android:fontFamily="@font/poppinsmedium"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/username_right" />
+                    android:drawableEnd="@drawable/username_right"
+                    android:drawableRight="@drawable/username_right"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
