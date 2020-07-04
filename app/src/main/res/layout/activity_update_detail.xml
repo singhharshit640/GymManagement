@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvDashboard"
+                android:id="@+id/tvDashboardU"
                 android:textSize="30dp"
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="@color/white"
@@ -61,7 +61,7 @@
                 android:layout_height="45dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/fName"
+                    android:id="@+id/fNameU"
                     android:hint="First Name"
                     android:layout_marginLeft="15dp"
                     android:layout_gravity=""
@@ -85,7 +85,7 @@
                 android:layout_height="45dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sName"
+                    android:id="@+id/sNameU"
                     android:hint="Last Name"
                     android:layout_marginLeft="15dp"
                     android:textSize="18sp"
@@ -108,6 +108,7 @@
                 android:layout_height="45dp">
 
                 <TextView
+                    android:id="@+id/gd"
                     android:text="Gender: "
                     android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
@@ -117,12 +118,14 @@
                     android:layout_height="match_parent"/>
 
                 <Spinner
-                    android:id="@+id/genderS"
+                    android:id="@+id/genderSU"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/gender"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="105dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
 
                 </Spinner>
 
@@ -138,7 +141,7 @@
                 android:layout_height="45dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/age"
+                    android:id="@+id/ageU"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity=""
@@ -163,6 +166,7 @@
                 android:layout_height="45dp">
 
                 <TextView
+                    android:id="@+id/bg"
                     android:text="Blood Group: "
                     android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
@@ -172,12 +176,14 @@
                     android:layout_height="match_parent"/>
 
                 <Spinner
-                    android:id="@+id/bloofGrpS"
+                    android:id="@+id/bloofGrpSU"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/bloodgroup"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="150dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
 
                 </Spinner>
 
@@ -193,7 +199,7 @@
                 android:layout_height="45dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/height"
+                    android:id="@+id/heightU"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity=""
@@ -218,7 +224,7 @@
                 android:layout_height="45dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/weight"
+                    android:id="@+id/weightU"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity=""
@@ -243,6 +249,7 @@
                 android:layout_height="45dp">
 
                 <TextView
+                    android:id="@+id/sp"
                     android:text="Select Plan: "
                     android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
@@ -252,12 +259,14 @@
                     android:layout_height="match_parent"/>
 
                 <Spinner
-                    android:id="@+id/planS"
+                    android:id="@+id/planSU"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/plan"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="150dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
 
                 </Spinner>
 
@@ -277,10 +286,10 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppinsbold"
                     android:gravity="center"
-                    android:text="Save"
+                    android:text="Update"
                     android:contextClickable="true"
                     android:clickable="true"
-                    android:id="@+id/saveBtn"
+                    android:id="@+id/saveBtnU"
                     android:textColor="#fff"
                     android:textSize="22dp" />
 

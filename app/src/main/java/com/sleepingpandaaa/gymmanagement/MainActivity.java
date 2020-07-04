@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tvLoginAsUser, tvLogInAsAdmin;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvLoginAsUser = findViewById(R.id.tvLoginAsUser);
         tvLogInAsAdmin = findViewById(R.id.tvLoginAsAdmin);
+        mAuth = FirebaseAuth.getInstance();
 
         tvLoginAsUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,4 +43,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currenUser = mAuth.getCurrentUser();
+        if(currenUser == null){
+            //Donothing
+        }else{
+            if(currenUser.getUid().equals("MhpqOupASgTpy1twPgRXc0kwyCE3")){
+                startActivity(new Intent(getApplicationContext(),DashboardAdmin.class));
+                finish();
+            }else{
+                startActivity(new Intent(getApplicationContext(),DashboardUser.class));
+                finish();
+            }
+
+        }
+    }
+
 }

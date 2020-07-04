@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class DashboardAdmin extends AppCompatActivity {
 
-    ImageView ivManage, ivNetStats, ivPayment;
+    ImageView ivManage, ivNetStats, ivPayment,ivLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class DashboardAdmin extends AppCompatActivity {
         ivManage = findViewById(R.id.ivManage);
         ivNetStats = findViewById(R.id.ivNetStats);
         ivPayment = findViewById(R.id.ivPayment);
+        ivLogout = findViewById(R.id.logoutAdmin);
 
         ivManage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,15 @@ public class DashboardAdmin extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardAdmin.this, PaymentActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        ivLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardAdmin.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
