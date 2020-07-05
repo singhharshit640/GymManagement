@@ -59,6 +59,7 @@
                 android:id="@+id/etPassword1"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
+                app:passwordToggleEnabled="true"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
