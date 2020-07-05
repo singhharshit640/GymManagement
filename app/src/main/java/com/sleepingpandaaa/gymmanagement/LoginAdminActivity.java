@@ -51,7 +51,7 @@ public class LoginAdminActivity extends AppCompatActivity {
                     Toast.makeText(LoginAdminActivity.this,"Please enter Password",Toast.LENGTH_SHORT)
                             .show();
                 }
-                else{
+                else if(Adminemail.equals("admin@gmail.com") && Adminpassword.equals("password")){
                     loadingBar.setTitle("Signing You In");
                     loadingBar.setMessage("Please wait...");
                     loadingBar.setCanceledOnTouchOutside(true);
@@ -74,6 +74,9 @@ public class LoginAdminActivity extends AppCompatActivity {
                                 }
                             });
 
+                }
+                else {
+                    Toast.makeText(LoginAdminActivity.this, "Wrong Credentials Entered!", Toast.LENGTH_LONG).show();
                 }
             }
         });
