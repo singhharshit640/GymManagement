@@ -83,6 +83,7 @@
                             android:src="@drawable/add_details" />
 
                         <TextView
+                            android:id="@+id/addDetail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
