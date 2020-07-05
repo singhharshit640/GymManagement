@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 public class ManageActivity extends AppCompatActivity {
 
-    TextView tvRemoveUser, tvUserDiet;
+//    TextView tvRemoveUser, tvUserDiet;
+//    Not present in ManageActivity as buttons were shifted to the cardview of this activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,16 +19,16 @@ public class ManageActivity extends AppCompatActivity {
         Tools.setSystemBarLight(ManageActivity.this);
         Tools.setSystemBarColor(ManageActivity.this, R.color.colorPrimaryDark);
 
-        tvRemoveUser = findViewById(R.id.tvRemoveUser);
-        tvUserDiet = findViewById(R.id.tvUserDiet);
-
-        tvUserDiet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ManageActivity.this, UserDietActivity.class);
-                startActivity(intent);
-            }
-        });
+//        tvRemoveUser = findViewById(R.id.tvRemoveUser);
+//        tvUserDiet = findViewById(R.id.tvUserDiet);
+//
+//        tvUserDiet.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(ManageActivity.this, UserDietActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }

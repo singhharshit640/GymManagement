@@ -3,7 +3,6 @@ package com.sleepingpandaaa.gymmanagement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -51,7 +50,7 @@ public class DashboardAdmin extends AppCompatActivity {
         ivLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardAdmin.this, MainActivity.class);
+                Intent intent = new Intent(DashboardAdmin.this, StartActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -4,61 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvLoginAsUser, tvLogInAsAdmin;
-    private FirebaseAuth mAuth;
+    ImageView ivSplashScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Tools.setSystemBarLight(MainActivity.this);
-        Tools.setSystemBarColor(MainActivity.this, R.color.white);
 
-        tvLoginAsUser = findViewById(R.id.tvLoginAsUser);
-        tvLogInAsAdmin = findViewById(R.id.tvLoginAsAdmin);
-        mAuth = FirebaseAuth.getInstance();
+        ivSplashScreen = findViewById(R.id.ivSplashScreen);
 
-        tvLoginAsUser.setOnClickListener(new View.OnClickListener() {
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
+        ivSplashScreen.startAnimation(animation1);
+
+
+        Handler h = new Handler();
+
+        h.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+            public void run() {
 
-        tvLogInAsAdmin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginAdminActivity.class);
+                Intent intent = new Intent(MainActivity.this,StartActivity.class);
                 startActivity(intent);
-            }
-        });
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currenUser = mAuth.getCurrentUser();
-        if(currenUser == null){
-            //Donothing
-        }else{
-            if(currenUser.getUid().equals("MhpqOupASgTpy1twPgRXc0kwyCE3")){
-                startActivity(new Intent(getApplicationContext(),DashboardAdmin.class));
                 finish();
-            }else{
-                startActivity(new Intent(getApplicationContext(),DashboardUser.class));
-                finish();
-            }
 
-        }
+            }
+        },1200);
     }
 
 }

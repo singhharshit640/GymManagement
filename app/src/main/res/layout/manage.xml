@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
+<LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        xmlns:card_view= "http://schemas.android.com/apk/res-auto"
         card_view:cardBackgroundColor="#f6f6f6"
         card_view:cardCornerRadius="12dp"
-        card_view:cardElevation="10dp"
+        card_view:cardElevation="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_margin="7dp"
         android:padding="5dp"
         card_view:cardUseCompatPadding="false"
@@ -16,56 +18,116 @@
         android:layout_height="wrap_content"
         >
 
-        <LinearLayout
-            android:padding="10dp"
+        <RelativeLayout
+            android:padding="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/ivPref"
-                android:layout_width="50dp"
-                android:layout_marginTop="15dp"
-                android:layout_height="55dp"
-                android:layout_marginLeft="3dp"
-                android:src="@drawable/profile" />
-
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_marginTop="5dp"
-                    android:id="@+id/tvID"
-                    android:fontFamily="@font/poppinsbold"
-                    android:textSize="16sp"
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:src="@drawable/gymcard"/>
+
+                <LinearLayout
+                    android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ID: " />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvManageName"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textSize="14dp"
-                    android:text="Harshit" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvManagePlan"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    android:text="Current Plan" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/tvID"
+                            android:fontFamily="@font/poppinsbold"
+                            android:textSize="18sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ID: " />
+
+                        <TextView
+                            android:id="@+id/tvManageName"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textSize="14dp"
+                            android:text="Harshit" />
+
+                        <TextView
+                            android:id="@+id/tvManagePlan"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="Current Plan" />
+                    </LinearLayout>
+
             </LinearLayout>
 
 
 
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_back">
+
+                    <TextView
+                        android:id="@+id/tvRemoveUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:gravity="center"
+                        android:text="Remove User"
+                        android:clickable="true"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_back">
+
+                    <TextView
+                        android:id="@+id/tvUserDiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:gravity="center"
+                        android:text="Set Diet"
+                        android:clickable="true"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
         </LinearLayout>
+
+
+        </RelativeLayout>
 
 
 
