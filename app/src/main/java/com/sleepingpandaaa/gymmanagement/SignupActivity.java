@@ -58,12 +58,12 @@ public class SignupActivity extends AppCompatActivity {
         String password = password1.getText().toString();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(SignupActivity.this,"Please enter email...",Toast.LENGTH_SHORT)
+            Toast.makeText(SignupActivity.this,"Please enter Email",Toast.LENGTH_SHORT)
                     .show();
         }
         else if(TextUtils.isEmpty(password)){
 
-            Toast.makeText(SignupActivity.this,"Please enter password...",Toast.LENGTH_SHORT)
+            Toast.makeText(SignupActivity.this,"Please enter Password",Toast.LENGTH_SHORT)
                     .show();
         }
         else{
@@ -80,7 +80,7 @@ public class SignupActivity extends AppCompatActivity {
 
                                 String currentUserId = mAuth.getCurrentUser().getUid();
                                 RootRef.child("Users").child(currentUserId).setValue("");
-                                Toast.makeText(SignupActivity.this,"Account Created Successfully...",Toast.LENGTH_SHORT)
+                                Toast.makeText(SignupActivity.this,"Account Created Successfully!",Toast.LENGTH_SHORT)
                                         .show();
                                 loadingBar.dismiss();
                                 startActivity(new Intent(getApplicationContext(),DashboardUser.class));
