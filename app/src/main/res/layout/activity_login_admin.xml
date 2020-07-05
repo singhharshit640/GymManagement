@@ -72,6 +72,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:id="@+id/etAdminUsername"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/username_right"
                     android:drawableRight="@drawable/username_right"
@@ -90,6 +91,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/etAdminPassword"
                     android:drawableEnd="@drawable/password_right"
                     android:drawableRight="@drawable/password_right"
                     android:fontFamily="@font/poppinsmedium"
