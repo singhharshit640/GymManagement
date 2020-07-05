@@ -10,9 +10,9 @@
 
     <RelativeLayout
         android:layout_marginTop="32dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/listofusers"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/User_list"
             android:layout_marginTop="25dp"
             android:layout_below="@id/ManageUsers"
             android:layout_width="match_parent"
