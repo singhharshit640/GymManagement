@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Gym Management</string>
+    <string name="PaymentReminder">Payment Reminder</string>
 
     <string-array name="gender">
         <item>Male</item>

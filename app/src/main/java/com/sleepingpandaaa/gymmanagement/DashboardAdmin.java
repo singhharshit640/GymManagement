@@ -30,6 +30,7 @@ public class DashboardAdmin extends AppCompatActivity {
         ivManage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(DashboardAdmin.this, ManageActivity.class);
                 startActivity(intent);
             }

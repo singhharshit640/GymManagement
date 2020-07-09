@@ -25,42 +25,13 @@
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/paymentRecyclerView"
             android:layout_marginTop="25dp"
             android:layout_below="@id/Payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_back">
-
-            <TextView
-                android:padding="3dp"
-                android:id="@+id/tvSetPayment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/poppinsbold"
-                android:gravity="center"
-                android:text="Set Payment"
-                android:clickable="true"
-                android:textColor="#fff"
-                android:textSize="20dp" />
-
-        </RelativeLayout>
-    </LinearLayout>
 
 
 </LinearLayout>

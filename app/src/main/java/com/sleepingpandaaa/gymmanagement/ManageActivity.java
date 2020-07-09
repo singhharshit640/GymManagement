@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,7 @@ public class ManageActivity extends AppCompatActivity {
     private String currentUserId;
     private RecyclerView User_list;
     private DatabaseReference mDatabase;
+    private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,11 @@ public class ManageActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        loadingBar = new ProgressDialog(this);
+        loadingBar.setTitle("Loading data");
+        loadingBar.setMessage("Please wait...");
+        loadingBar.setCanceledOnTouchOutside(true);
+        loadingBar.show();
 
         FirebaseRecyclerOptions<User> options =
                 new FirebaseRecyclerOptions.Builder<User>()
@@ -75,11 +82,18 @@ public class ManageActivity extends AppCompatActivity {
                 return viewHolder;
             }
 
+            @Override
+            public void onDataChanged() {
+                super.onDataChanged();
+                loadingBar.dismiss();
+            }
         };
 
         User_list.setAdapter(adapter);
         adapter.startListening();
     }
+
+
 
     public static class UserListViewHolder extends RecyclerView.ViewHolder {
         TextView idTV, firstNameTV, lastNameTV,currentPlanTV,removeUser,userDiet;
