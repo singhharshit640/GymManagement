@@ -107,11 +107,11 @@ public class DashboardUser extends AppCompatActivity {
         currentUserId = mFirebaseUser.getUid();
         addDetail = findViewById(R.id.addDetail);
 //        Log.d("idddd", "InitializaAll: " + currentUserId);
-        RootRef.child("UserInfo").addValueEventListener(new ValueEventListener() {
+        RootRef.child("UserInfo").child(currentUserId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
-                    if(dataSnapshot.hasChild(currentUserId)){
+                    if(dataSnapshot.hasChild("nameFirst")){
                         addDetail.setText("Update Detail");
                         updatedProfile = true;
                     }

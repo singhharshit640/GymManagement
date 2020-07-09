@@ -118,7 +118,7 @@ public class AddUserDetail extends AppCompatActivity {
             userData.put("date",date.split(" ")[0]);
             Log.d("Nice", "SaveData: " + userData);
 
-            userInfo.child(currentUserId.toString()).setValue(userData);
+            userInfo.child(currentUserId.toString()).updateChildren(userData);
             loadingBar.dismiss();
             startActivity(new Intent(getApplicationContext(),DashboardUser.class));
             finish();

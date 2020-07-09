@@ -27,7 +27,7 @@ public class SignupActivity extends AppCompatActivity {
     private ProgressDialog loadingBar;
     private TextInputEditText emailID1;
     private TextInputEditText password1;
-    private DatabaseReference RootRef;
+    private DatabaseReference RootRef,userInfo;
 
 
     @Override
@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     private void SendUserToUserActivity() {
-        String email = emailID1.getText().toString();
+        final String email = emailID1.getText().toString();
         String password = password1.getText().toString();
 
         if(TextUtils.isEmpty(email)){
@@ -80,6 +80,7 @@ public class SignupActivity extends AppCompatActivity {
 
                                 String currentUserId = mAuth.getCurrentUser().getUid();
                                 RootRef.child("Users").child(currentUserId).setValue("");
+                                userInfo.child(currentUserId).child("emailId").setValue(email);
                                 Toast.makeText(SignupActivity.this,"Account Created Successfully!",Toast.LENGTH_SHORT)
                                         .show();
                                 loadingBar.dismiss();
@@ -104,6 +105,7 @@ public class SignupActivity extends AppCompatActivity {
         tvSignIn1 = findViewById(R.id.tvSignIn1);
         tvSignUp1 = findViewById(R.id.tvSignup1);
         RootRef = FirebaseDatabase.getInstance().getReference();
+        userInfo = FirebaseDatabase.getInstance().getReference().child("UserInfo");
     }
 
 }
