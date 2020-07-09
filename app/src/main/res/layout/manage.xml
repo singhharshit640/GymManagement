@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
-                    android:layout_width="190dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_back">
 
@@ -123,24 +123,6 @@
                         android:textSize="18sp" />
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_back">
-
-                    <TextView
-                        android:id="@+id/tvUserDiet"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/poppinsbold"
-                        android:gravity="center"
-                        android:text="Set Diet"
-                        android:clickable="true"
-                        android:textColor="#fff"
-                        android:textSize="18sp" />
-
-                </RelativeLayout>
 
             </LinearLayout>
 

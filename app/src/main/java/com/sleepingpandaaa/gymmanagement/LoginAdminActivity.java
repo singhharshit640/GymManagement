@@ -54,7 +54,7 @@ public class LoginAdminActivity extends AppCompatActivity {
                 else if(Adminemail.equals("admin@gmail.com") && Adminpassword.equals("password")){
                     loadingBar.setTitle("Signing You In");
                     loadingBar.setMessage("Please wait...");
-                    loadingBar.setCanceledOnTouchOutside(true);
+                    loadingBar.setCanceledOnTouchOutside(false);
                     loadingBar.show();
 
                     mAuth.signInWithEmailAndPassword(Adminemail,Adminpassword)

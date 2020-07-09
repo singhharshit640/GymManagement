@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Gym Management</string>
     <string name="PaymentReminder">Payment Reminder</string>
+    <string name="my_diet_plan">My Diet Plan</string>
+    <string name="user_image">user image</string>
+    <string name="select_plan">Select Plan:</string>
+    <string name="breakfast">Breakfast:</string>
+    <string name="breakfast_meal_will_be_shown_here">Breakfast meal will be shown here!</string>
+    <string name="lunch">Lunch:</string>
+    <string name="lunch_meal_will_be_shown_here">Lunch meal will be shown here!</string>
+    <string name="dinner">Dinner:</string>
+    <string name="dinner_meal_will_be_shown_here">Dinner meal will be shown here!</string>
+    <string name="sleep_of_7_8_hours_is_recommended">SLEEP OF 7-8 HOURS IS RECOMMENDED!</string>
 
     <string-array name="gender">
         <item>Male</item>
@@ -26,4 +36,48 @@
         <item>6 Month</item>
         <item>1 Year</item>
     </string-array>
+
+    <string-array name="dietplan">
+        <item>Diet Plan for Weight Loss</item>
+        <item>Diet Plan for Weight Gain</item>
+        <item>Diet Plan for Muscle Gain</item>
+    </string-array>
+
+    <string name="WLbreakfast">
+        Orange Juice + 2 boiled eggs whites. Vegans can have an apple instead of egg whites.
+    </string>
+    
+    <string name="WLlunch">
+        Cabbage soup made with lots of veggies such as tomato, broccoli, cabbage, onion, garlic, spinach, and carrots.
+        You can also have 2 Chapati with Daal (Pulses). You can have some fruits after lunch.
+    </string>
+
+    <string name="WLdinner">
+        Baked fish/Boiled chicken breast. Vegans can have Paneer/ grilled tofu and veggies.
+    </string>
+
+    <string name="MGbreakfast">
+        6 eggs + 1 cup oatmeal + fresh orange juice
+    </string>
+
+    <string name="MGlunch">
+        Boiled chicken breast with veggies + 3 chapati made of whole grain. You can have some fruits after lunch.
+    </string>
+
+    <string name="MGdinner">
+        Boiled chicken breast with 1 cup brown rice and 1 cup beans
+    </string>
+
+    <string name="WGbreakfast">
+        Milk (1 Glass) + 1 banana with bread with butter / Parantha / Omelet.
+    </string>
+
+    <string name="WGlunch">
+        4 whole grain chapati with any vegetable with curd. You can have some fruits after lunch.
+    </string>
+
+    <string name="WGdinner">
+        2 whole grain chapati with 2 cup rice + 1 cup daal (Pulses).
+    </string>
+
 </resources>

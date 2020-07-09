@@ -7,13 +7,14 @@
     android:background="@drawable/wave"
     tools:context=".DietActivity">
 
+
     <TextView
         android:id="@+id/tvDashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="My Diet Plan"
+        android:text="@string/my_diet_plan"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,52 +22,197 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="325dp"
-        android:layout_height="300dp"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:cardElevation="20dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        app:layout_constraintVertical_bias="0.177">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_marginTop="28dp"
-                android:id="@+id/imageView3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/profile" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="110dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
 
             <TextView
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:id="@+id/tvMyDietPlan"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_vertical"
+                android:text="@string/select_plan"
                 android:textColor="#000"
-                android:textSize="28dp"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spDietPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="145dp"
+                android:layout_marginLeft="145dp"
+                android:entries="@array/dietplan" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Diet Plan will be shown here" />
+                android:layout_height="wrap_content">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/llBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/breakfast"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="#000"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="20sp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvBreakfastDiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:hint="@string/breakfast_meal_will_be_shown_here"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginEnd="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/llBreakfast"
+                    android:id="@+id/llLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lunch"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="#000"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="20sp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvLunchDiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:hint="@string/lunch_meal_will_be_shown_here"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDinner"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/llLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="#000"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="20sp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvDinnerDiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:hint="@string/dinner_meal_will_be_shown_here"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:text="@string/sleep_of_7_8_hours_is_recommended"
+                    android:layout_below="@id/llDinner"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

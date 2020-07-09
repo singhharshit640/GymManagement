@@ -54,7 +54,7 @@ public class ManageActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         loadingBar.setTitle("Loading data");
         loadingBar.setMessage("Please wait...");
-        loadingBar.setCanceledOnTouchOutside(true);
+        loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
         FirebaseRecyclerOptions<User> options =
@@ -70,8 +70,6 @@ public class ManageActivity extends AppCompatActivity {
                 holder.currentPlanTV.setText(model.getPlan());
                 holder.firstNameTV.setText(model.getNameFirst());
                 holder.lastNameTV.setText(model.getLastName());
-                holder.removeUser.setText("Remove User");
-                holder.userDiet.setText("Set Diet");
             }
 
             @NonNull
@@ -105,7 +103,6 @@ public class ManageActivity extends AppCompatActivity {
             lastNameTV = itemView.findViewById(R.id.tvManageSecondName);
             currentPlanTV = itemView.findViewById(R.id.tvManagePlan);
             removeUser = itemView.findViewById(R.id.tvRemoveUser);
-            userDiet = itemView.findViewById(R.id.tvUserDiet);
         }
     }
 }
