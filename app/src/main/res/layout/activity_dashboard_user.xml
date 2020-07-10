@@ -36,6 +36,7 @@
                 android:layout_height="60dp"/>
 
             <TextView
+                android:id="@+id/UserTV"
                 android:layout_below="@id/tvDashboard"
                 android:text="Hi, User!"
                 android:fontFamily="@font/poppinsmedium"
@@ -44,6 +45,18 @@
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/dateLeft"
+                android:layout_below="@id/UserTV"
+                android:text="You have days and month left"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
 
         </RelativeLayout>
 
@@ -213,6 +226,48 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:clickable="true"
+                        android:id="@+id/payNow"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Pay Now"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
 
         </GridLayout>
 

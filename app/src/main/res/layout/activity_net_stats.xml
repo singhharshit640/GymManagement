@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/statsRecyclerView"
             android:layout_marginTop="25dp"
             android:layout_below="@id/NetStats"
             android:layout_width="match_parent"

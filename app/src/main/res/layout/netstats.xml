@@ -49,20 +49,23 @@
 
                         <TextView
                             android:layout_marginTop="5dp"
-                            android:id="@+id/tvID"
+                            android:id="@+id/tvIDS"
                             android:fontFamily="@font/poppinsbold"
-                            android:textSize="18sp"
+                            android:textSize="20sp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ID: " />
+                            android:text="ID: "
+                            android:textColor="@android:color/black"
+                            />
 
                         <TextView
-                            android:id="@+id/tvManageName"
+                            android:id="@+id/tvManageNameS"
                             android:fontFamily="@font/poppinsmedium"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:textSize="14dp"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
                             android:text="Harshit" />
 
                         <LinearLayout
@@ -75,18 +78,21 @@
                                 android:fontFamily="@font/poppinsmedium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="14dp"
-                                android:text="Payment" />
+                                android:textSize="20sp"
+                                android:text="Payed on: "
+                                android:textColor="@android:color/black"
+                                />
+
                             <TextView
-                                android:id="@+id/tvManagePlan"
+                                android:id="@+id/dateS"
                                 android:layout_marginLeft="30dp"
                                 android:fontFamily="@font/poppinsmedium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="14dp"
-                                android:text="Payment Date" />
-
-
+                                android:textSize="20sp"
+                                android:text="Payment Date"
+                                android:textColor="@android:color/black"
+                                />
 
                         </LinearLayout>
                     </LinearLayout>

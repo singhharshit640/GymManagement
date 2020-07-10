@@ -66,10 +66,17 @@ public class ManageActivity extends AppCompatActivity {
                 = new FirebaseRecyclerAdapter<User, UserListViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull UserListViewHolder holder, int position, @NonNull User model) {
+                final String userIds = getRef(position).getKey();
                 holder.idTV.setText(model.getEmailId());
                 holder.currentPlanTV.setText(model.getPlan());
                 holder.firstNameTV.setText(model.getNameFirst());
                 holder.lastNameTV.setText(model.getLastName());
+                holder.removeUser.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        removeUser(userIds);
+                    }
+                });
             }
 
             @NonNull
@@ -91,6 +98,13 @@ public class ManageActivity extends AppCompatActivity {
         adapter.startListening();
     }
 
+    private void removeUser(String userId) {
+        DatabaseReference del = FirebaseDatabase.getInstance().getReference().child("UserInfo");
+        del.child(userId).removeValue();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+        ref.child(userId).child("suspended").setValue("");
+
+    }
 
 
     public static class UserListViewHolder extends RecyclerView.ViewHolder {
@@ -103,6 +117,7 @@ public class ManageActivity extends AppCompatActivity {
             lastNameTV = itemView.findViewById(R.id.tvManageSecondName);
             currentPlanTV = itemView.findViewById(R.id.tvManagePlan);
             removeUser = itemView.findViewById(R.id.tvRemoveUser);
+
         }
     }
 }

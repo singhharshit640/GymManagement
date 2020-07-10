@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class PaymentActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -66,20 +72,34 @@ public class PaymentActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<User, UserListViewHolder> adapter
                 = new FirebaseRecyclerAdapter<User, UserListViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull final UserListViewHolder holder, int position, @NonNull User model) {
+            protected void onBindViewHolder(@NonNull final UserListViewHolder holder, int position, @NonNull final User model) {
                 holder.idTV.setText(model.getEmailId());
                 holder.name.setText(model.getNameFirst());
                 holder.plan.setText(model.getPlan());
                 holder.dof.setText(model.getDate());
-                holder.payment.setText(R.string.PaymentReminder);
+                final String userIds = getRef(position).getKey();
 
-                holder.payment.setOnClickListener(new View.OnClickListener() {
+                FirebaseDatabase.getInstance().getReference().child("UserInfo").child(userIds).addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onClick(View view) {
-                        holder.payment.setVisibility(View.VISIBLE);
-                        AskAdmin();
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+                            String registerDate = dataSnapshot.child("date").getValue().toString();
+                            int month = Integer.parseInt(date.substring(5,7)) - (Integer.parseInt(registerDate.substring(5,7)));
+                            int days = Integer.parseInt(date.substring(8,date.length())) - (Integer.parseInt(registerDate.substring(8,date.length())));
+                            int timeGone = month*60 + days;
+                            int plan = Integer.parseInt(dataSnapshot.child("plan").getValue().toString().split(" ")[0]);
+                            int totalDays = plan*30 - timeGone;
+                            holder.payment.setText(totalDays + " days left");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
                     }
                 });
+
             }
 
             @NonNull
@@ -103,33 +123,7 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void AskAdmin(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(PaymentActivity.this, R.style.AlertDialog);
-        builder.setTitle("Enter Days Left : ");
 
-        final EditText groupNameField = new EditText(PaymentActivity.this);
-        groupNameField.setHint("e.g 2 days");
-        builder.setView(groupNameField);
-
-        builder.setPositiveButton("Send", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                String groupName = groupNameField.getText().toString();
-
-                if (TextUtils.isEmpty(groupName)) {
-                    Toast.makeText(PaymentActivity.this, "Please write group name", Toast.LENGTH_SHORT).show();
-                } else {
-                        FirebaseDatabase.getInstance().getReference().child("UserInfo").child(currentUserId);
-                }
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-        builder.show();
     }
 
 
