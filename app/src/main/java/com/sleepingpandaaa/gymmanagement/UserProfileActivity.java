@@ -46,13 +46,13 @@ public class UserProfileActivity extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     Log.d("Imp ", "onDataChange: " + dataSnapshot.child("date").getValue().toString());
                     tvName.setText(dataSnapshot.child("nameFirst").getValue().toString() + " " + dataSnapshot.child("lastName").getValue().toString());
-                    tvAge.setText(dataSnapshot.child("userAge").getValue().toString());
-                    tvHeight.setText(dataSnapshot.child("userHeight").getValue().toString());
-                    tvWeight.setText(dataSnapshot.child("userWeight").getValue().toString());
-                    tvPlan.setText("Plan Selected : " + dataSnapshot.child("plan").getValue().toString());
-                    tvGender.setText("Gender : " + dataSnapshot.child("gender").getValue().toString());
-                    tvBloodGroup.setText("BloodGrp : " + dataSnapshot.child("bloodGrp").getValue().toString());
-                    tvDate.setText("Date : " + dataSnapshot.child("date").getValue().toString());
+                    tvAge.setText("Age: " + dataSnapshot.child("userAge").getValue().toString());
+                    tvHeight.setText("Height: " + dataSnapshot.child("userHeight").getValue().toString() + " cm");
+                    tvWeight.setText("Weight: " + dataSnapshot.child("userWeight").getValue().toString() + " kg");
+                    tvPlan.setText("Plan Selected: " + dataSnapshot.child("plan").getValue().toString());
+                    tvGender.setText("Gender: " + dataSnapshot.child("gender").getValue().toString());
+                    tvBloodGroup.setText("BloodGrp: " + dataSnapshot.child("bloodGrp").getValue().toString());
+                    tvDate.setText("Date: " + dataSnapshot.child("date").getValue().toString());
                 }
             }
 

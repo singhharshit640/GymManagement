@@ -112,16 +112,31 @@ public class DashboardUser extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("UserInfo").child(currentUserId).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists()){
-                                Log.d("Imp ", "onDataChange: " + dataSnapshot.child("date").getValue().toString());
-                                HashMap<String,Object> map = new HashMap<>();
-                                map.put("nameFirst" ,dataSnapshot.child("nameFirst").getValue().toString());
-                                map.put("nameLast" , dataSnapshot.child("lastName").getValue().toString());
-                                map.put("emailId", dataSnapshot.child("emailId").getValue().toString());
-                                map.put("date",date);
-                                RootRef.child("Stats").child(currentUserId + date).setValue(map);
-                                Toast.makeText(DashboardUser.this, "Payment Successfull", Toast.LENGTH_LONG).show();
+
+                            if (dataSnapshot.child("nameFirst").exists() && dataSnapshot.child("lastName").exists() &&
+                            dataSnapshot.child("bloodGrp").exists() && dataSnapshot.child("emailId").exists() &&
+                            dataSnapshot.child("gender").exists() && dataSnapshot.child("date").exists() &&
+                                    dataSnapshot.child("plan").exists() && dataSnapshot.child("userAge").exists() &&
+                                    dataSnapshot.child("userHeight").exists() && dataSnapshot.child("userWeight").exists())
+                            {
+
+                                if(dataSnapshot.exists()){
+                                    Log.d("Imp ", "onDataChange: " + dataSnapshot.child("date").getValue().toString());
+                                    HashMap<String,Object> map = new HashMap<>();
+                                    map.put("nameFirst" ,dataSnapshot.child("nameFirst").getValue().toString());
+                                    map.put("nameLast" , dataSnapshot.child("lastName").getValue().toString());
+                                    map.put("emailId", dataSnapshot.child("emailId").getValue().toString());
+                                    map.put("date",date);
+                                    RootRef.child("Stats").child(currentUserId + date).setValue(map);
+                                    Toast.makeText(DashboardUser.this, "Payment Successfull", Toast.LENGTH_LONG).show();
+                                }
+                                
                             }
+                            else {
+                                Toast.makeText(DashboardUser.this, "Please enter your details first!", Toast.LENGTH_SHORT).show();
+                            }
+
+                            
                         }
 
                         @Override

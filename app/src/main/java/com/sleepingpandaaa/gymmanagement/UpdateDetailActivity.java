@@ -94,28 +94,6 @@ public class UpdateDetailActivity extends AppCompatActivity {
         userPlanU = planU.getSelectedItem().toString();
 
 
-        /*bloodGrp.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            }
-        });*/
-
-/*
-        gender.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            }
-        });
-*/
-
-/*
-        plan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            }
-        });
-*/
-
         if(TextUtils.isEmpty(nameFU)){
             Toast.makeText(this, "Please enter your first name", Toast.LENGTH_SHORT).show();
         }else if(TextUtils.isEmpty(nameLU)){
