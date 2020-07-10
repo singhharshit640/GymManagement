@@ -9,10 +9,12 @@
     <ImageView
         android:id="@+id/ivSplashScreen"
         android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_height="298dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splashscreen" />
+        app:srcCompat="@drawable/splash_screen" />
 </androidx.constraintlayout.widget.ConstraintLayout>
