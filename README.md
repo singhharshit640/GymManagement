@@ -1,7 +1,7 @@
 # GymManagement
 A Gym Management project developed using Android and Google Firebase.
 
-# Apk is avaiable in the project file
+# Apk is avaiable in the project file by the name "gym.apk"
 
 # Screenshots
 ![WhatsApp Image 2020-07-15 at 2 32 48 PM](https://user-images.githubusercontent.com/51756431/87526703-ccbd8800-c6a8-11ea-919a-3b0a4519f0ff.jpeg)
