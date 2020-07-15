@@ -1,5 +1,8 @@
 # GymManagement
-A Gym Management project developed using Android and Google Firebase
+A Gym Management project developed using Android and Google Firebase.
+
+# Apk is avaiable in the project file
+
 # Screenshots
 ![WhatsApp Image 2020-07-15 at 2 32 48 PM](https://user-images.githubusercontent.com/51756431/87526703-ccbd8800-c6a8-11ea-919a-3b0a4519f0ff.jpeg)
 ![WhatsApp Image 2020-07-15 at 2 32 48 PM (1)](https://user-images.githubusercontent.com/51756431/87526721-d21ad280-c6a8-11ea-833c-ca33f1d55a3c.jpeg)
